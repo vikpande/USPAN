@@ -1,12 +1,12 @@
-/* global describe, it, browser */
+import {
+  Selector
+} from 'testcafe';
 
-const expect = require('chai').expect;
+fixture `Getting Started`
+  .page `http://localhost:3000`;
 
-describe('TodoList App', () => {
-  it('Should load with the right title', () => {
-    browser.url('http://localhost:3000/');
-    const actualTitle = browser.getTitle();
-
-    expect(actualTitle).to.eql('Todo List');
-  });
+test('My first test', async t => {
+    await t
+      .typeText('.todo-input', 'learn testing')
+      .click('.todo-submit');
 });
