@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import AddTodo from './components/addTodo/';
+import Home from './components/home/home';
 
-const App = () => (
-  <div className="App">
-    <h1>Todo list</h1>
-    <AddTodo submitTodo={() => {}} />
-  </div>
-);
+class App extends React.Component {
+  render() {
+    return (
+    <div className="App">
+      <Home />
+    </div>
+    );
+  }
+};
 
 export default App;

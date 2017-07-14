@@ -5,8 +5,12 @@ import {
 fixture `Getting Started`
   .page `http://localhost:3000`;
 
-test('My first test', async t => {
+test('Should have button to get into buyer section', async t => {
     await t
-      .typeText('.todo-input', 'learn testing')
-      .click('.todo-submit');
+      .click('.buyer');
+});
+
+test('Should have button to get into manufacturer section', async t => {
+    await t
+      .click('.manufacturer');
 });
